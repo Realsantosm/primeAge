@@ -1,15 +1,16 @@
 var readlineSync = require('readline-sync');
 var chalk = require('chalk');
 
-console.log(chalk.underline.bold.bgYellow('Let\'s Play a Game Friend!!!\n'));
+console.log(chalk.bold.bgRed(' Common Let\'s Play a Game Friend!!!\n'));
+//chalk.underline.bold.bgYellow
 
-var userName = readlineSync.question(chalk.rgb(0, 255, 255)('May I know your Name: \n'));
+var userName = readlineSync.question(chalk.rgb(0, 255, 255)('Can I have your name: \n'));
 
 
 console.log('\n');
-console.log(chalk.bold.bgRed(userName + ' Let\'s See Whether your Birth Date in a Prime Number'));
+console.log(chalk.bold.bgMagentaBright(userName + ' >> Check Whether your Birth Date is a Prime Number'));
 
-var dateOfBirth = readlineSync.question(chalk.rgb(0, 255, 0)('\nPlease Enter your Date of Birth in DD/MM format: '));
+var dateOfBirth = readlineSync.question(chalk.underline.bgYellow('\nPlease Enter your Date of Birth in DD/MM format: '));
 
 var splitByDateMonth = dateOfBirth.split('/');
 
@@ -35,10 +36,10 @@ if (isNaN(date)) {
             }
             if (count < 2) {
                 console.log(chalk.rgb(255, 255, 0)('\nCongratulations ' + userName + ', Your Birth Day ' + date + ' is a Prime Number'));
-                console.log(chalk.rgb(51, 51, 255)('\nThank you ' + userName + ' for playing this game. Please Share a Screenshot on Social Media'));
+                console.log(chalk.rgb(51, 51, 255)('\nThank you !! ' + userName + ' Hope you enjoyed playing this game. Please take a Screenshot on Social Media and share it.'));
             } else {
                 console.log(chalk.rgb(0, 255, 204)('\nSorry ' + userName + ', Your Birth Day ' + date + ' is not a Prime Number'));
-                console.log(chalk.rgb(51, 51, 255)('\nThank you ' + userName + ' for playing this game.'));
+                console.log(chalk.yellowBright('\nThank you ' + userName + ' for playing this game.'));
             }
           }
         } else {
@@ -48,3 +49,6 @@ if (isNaN(date)) {
         console.log(chalk.redBright('\nPlease Enter a Valid Month'));
     }
 }
+
+//Code to get it Hosted In the Web
+//     ?embed=1output=1#index.js
